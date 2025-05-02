@@ -1,15 +1,11 @@
 import os
 import sys 
-import math
-import glob
 import time
 import json
 import torch
 import numpy as np
-import trimesh
 import viser
 import viser.transforms as vtf
-import threading
 import warnings 
 warnings.filterwarnings('ignore')
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -20,7 +16,6 @@ from argparse import ArgumentParser
 from typing import Tuple, Literal, List
 from viser.theme import TitlebarButton, TitlebarConfig, TitlebarImage
 
-from arguments import ModelParams, PipelineParams, get_combined_args
 from internal.viewer import ViewerRenderer, ClientThread
 from internal.viewer import GaussianModelforViewer as GaussianModel
 from internal.viewer.ui import RenderPanel, TransformPanel, EditPanel
